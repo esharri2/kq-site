@@ -1,0 +1,55 @@
+.projects, .writings {
+    $project-page-margin: 15px;
+
+    .project-title {
+        text-transform: uppercase;
+        font-style: italic;
+        margin: 0 0 $project-page-margin 0;
+    }
+
+    .publication-title{
+        text-transform: uppercase;
+        margin-bottom: $project-page-margin
+
+    }
+
+    .subtitle {
+        display: flex;
+        flex-wrap:wrap;
+
+        *:not(:first-child) {
+            // padding: 0 5px;
+        }
+
+        *:not(:last-child)::after {
+            content: "/";
+            // white-space: pre;
+            color: $color-default-accent-1;
+            display:inline-block;
+            height:100%;
+            padding: 0 10px;
+
+        }
+
+        margin-bottom:$project-page-margin;
+
+        .type {
+            text-transform: capitalize;
+        }
+    }
+
+    .link {
+        @extend %reset-link;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+        margin-bottom: $project-page-margin;
+    }
+
+    .description {
+        margin-bottom:$project-page-margin * 2;
+    }
+}

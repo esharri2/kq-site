@@ -8,7 +8,7 @@ require('dotenv').config()
 keystone.init({
     'cookie secret': process.env.KEYSTONESECRET,
     // 'cookie secret': "test",
-    'name': 'ladyliberty',
+    'name': 'kerriquinnsite',
     'sass': 'public',
 	'static': 'public',
     'user model': 'User',

@@ -1,25 +1,25 @@
 var keystone = require('keystone');
 var async = require('async');
 
-module.exports = function (req, res) {
+module.exports = function(req, res) {
 
     var view = new keystone.View(req, res);
     var locals = res.locals;
     locals.section = 'contact';
-    locals.contacts = [];
+    locals.socials = [];
 
     var Contact = keystone.list('Contact');
 
-    view.on('init', function (next) {
+    view.on('init', function(next) {
         var q = Contact.model.find();
-        q.exec(function (err, results) {
+        q.exec(function(err, results) {
+            locals.email
             results.forEach(res => {
                 let iconName;
                 const platform = res.platform.toLowerCase();
-
                 switch (platform) {
                     case 'email':
-                        iconName = "fas fa-envelope";
+                        locals.email = res;
                         break;
                     case 'twitter':
                         iconName = "fab fa-twitter";
@@ -32,10 +32,11 @@ module.exports = function (req, res) {
                         break;
                     default:
                         iconName = "fas fa-globe";
-                        
                 }
                 res.icon = iconName;
-                locals.contacts.push(res)
+                if (platform !== "email") {
+                    locals.socials.push(res);
+                }
             })
             next(err);
         })

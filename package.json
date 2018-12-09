@@ -1,5 +1,5 @@
 {
-  "name": "lady-liberty",
+  "name": "kq-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,23 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node keystone.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/esharri2/prodco.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/esharri2/prodco/issues"
-  },
-  "homepage": "https://github.com/esharri2/prodco#readme",
   "dependencies": {
     "dotenv": "^6.0.0",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
     "keystone": "^4.0.0",
-    "moment": "^2.22.2",
     "node-sass": "^4.9.3",
-    "node-sass-middleware": "^0.11.0"
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.18.7"
   }
 }

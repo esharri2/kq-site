@@ -1,8 +1,0 @@
-exports.create = {
-    About: [
-        {
-            title:"About",
-            content: '<p>Viverra mauris in aliquam sem fringilla. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Faucibus a pellentesque sit amet porttitor. Elit sed vulputate mi sit amet. Neque ornare aenean euismod elementum nisi. Quis enim lobortis scelerisque fermentum dui faucibus in. Rutrum quisque non tellus orci ac auctor augue mauris augue. Libero nunc consequat interdum varius sit amet mattis vulputate. Aliquam purus sit amet luctus venenatis lectus magna fringilla. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Tempus imperdiet nulla malesuada pellentesque elit.</p><p>Tortor dignissim convallis aenean et tortor at risus. Neque vitae tempus quam pellentesque nec. Suspendisse faucibus interdum posuere lorem ipsum. Dictumst quisque sagittis purus sit amet. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Integer feugiat scelerisque varius morbi. Euismod in pellentesque massa placerat duis. Massa tempor nec feugiat nisl pretium fusce id velit. Aliquam malesuada bibendum arcu vitae. Quis blandit turpis cursus in hac habitasse platea. Condimentum id venenatis a condimentum vitae sapien. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Velit egestas dui id ornare arcu odio ut sem nulla. At erat pellentesque adipiscing commodo elit. Scelerisque varius morbi enim nunc faucibus a. Pellentesque habitant morbi tristique senectus et. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Id nibh tortor id aliquet. In iaculis nunc sed augue lacus viverra vitae. Enim facilisis gravida neque convallis a cras semper auctor neque.</p>'
-        },
-    ],
-};

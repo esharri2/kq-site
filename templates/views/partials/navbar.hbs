@@ -1,5 +1,10 @@
-<nav class="navbar">
-    <i class="fas fa-bars hamburger"></i>
+<nav class="navbar initial">
+    {{!-- TODO add role --}}
+    <i class="hamburger" role="button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </i>
     <ul class="links">
         {{# each navLinks}}
         <li>
@@ -11,30 +16,16 @@
 </nav>
 
 <script>
-    (function () {
-        const links = document.querySelector('.links');
-        const hamburger = document.querySelector('.hamburger');
-
-        const toggleHamburger = () => {
-            if (window.innerWidth < 800) {
-
-            } else {
-                links.classList.remove("expanded");
-            }
-
+    document.querySelector(".hamburger").addEventListener("click", function (e) {
+        const parentClassList = e.target.parentNode.classList;
+        if (parentClassList.contains("initial")) {
+            parentClassList.remove("initial");
+            parentClassList.add("expanded");
+        } else {
+            parentClassList.toggle("expanded");
+            parentClassList.toggle("contracted");
         }
-        window.addEventListener("resize", function () {
-            toggleHamburger();
-        })
 
-        window.addEventListener("load", function () {
-            toggleHamburger();
-        })
-
-        document.querySelector('.hamburger').addEventListener("click", function (event) {
-            links.classList.toggle('expanded');
-        })
-    })()
-
+    })
 
 </script>

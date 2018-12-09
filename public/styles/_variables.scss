@@ -1,0 +1,49 @@
+ 
+// $color-rust: rgba(122, 92, 97, 1);
+// $color-orange: rgba(232, 141, 103, 1);
+// $color-white: rgba(252, 250, 249, 1);
+// $color-gray: rgba(181, 170, 157, 1);
+// $color-black: rgba(7, 16, 19, 1);
+
+$color-white: rgba(234, 234, 234, 1);
+$color-orange: rgba(224, 122, 95, 1);
+$color-darkblue: rgba(16, 37, 66, 1);
+$color-gray: rgba(49, 61, 90, 1);
+$color4: rgba(49, 61, 90, 1);
+
+
+$color-default-background: $color-white;
+$color-default-text: $color-gray;
+$color-default-accent-1: $color-orange;
+
+/* FONTS */
+$font-default: 'Cabin', sans-serif;
+
+$font-bold: 700;
+$font-normal: 400;
+$font-thin: 300;
+
+$font-size-base: medium;
+
+/*BREAKPOINTS*/
+$screen-sm: 576px;
+$screen-md: 650px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+/* SIZES */
+$width-nav: 150px;
+$width-header-content-max: $screen-xl;
+
+/* SHADOWS */
+$shadow-s: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-m: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-l: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+/* TRANSITIONS */
+$transition-fast: 0.2s;
+$transition-med: 0.5s;
+$transition-slow: 1s;
+
+$transition-default-timing: ease-out;
+$transition-ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);

@@ -1,12 +1,13 @@
- {{>navbar }}
+{{>navbar }}
 
-<div class="container contacts">
-  {{!-- test to see if no posts --}} {{#each contacts}}
-
-  <div class="contact">
-    <a href={{address}}><i class='{{icon}}'></i><div class="iconLabel">{{showPlatformAs}}</div>
-    </a></div>
-
-
-  {{/each}}
+<div class="container contact">
+    <p><span class="label">Email:</span> <a class="email-link" href="mailto:{{email.address}}">{{email.address}}</a></p>
+    {{#if socials}}
+    <span class="label">Social media:</span>
+    {{#each socials}}
+    <div class="social">
+        <a href={{address}}><i class='{{icon}}'></i></a>
+    </div>
+    {{/each}}
+    {{/if}}
 </div>

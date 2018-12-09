@@ -1,0 +1,111 @@
+.navbar {
+    $transition-time: .5s;
+    width: $width-nav;
+    display: flex;
+    color: $color-default-text;
+
+    .hamburger {
+        width: 25px;
+        margin: 5px 20px 0 20px;
+        display: none;
+        height: 25px;
+        cursor: pointer;
+        transition: all $transition-time;
+
+        span {
+            display: block;
+            height: 3px;
+            margin-bottom: 5px;
+            width: 100%;
+            background: $color-default-accent-1;
+            pointer-events: none;
+            transition: inherit;
+        }
+    }
+
+    ul,
+    li {
+        @extend %reset-list;
+    }
+
+    a {
+        @extend %reset-link;
+    }
+
+    .links {
+        li:first-child {
+            font-size: xx-large;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: $color-default-accent-1;
+        }
+
+        li:not(:first-child) {
+            margin-bottom: 10px;
+
+            a:hover,
+            a:focus {
+                font-weight: 700;
+            }
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 10px;
+        color: $color-default-accent-1;
+
+
+        li:first-child {
+            line-height: 30px;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        // li:first-child {}
+        li:not(:first-child) {
+            display: none;
+            width: 0;
+        }
+
+        &.expanded {
+            background: $color-gray;
+            height: 100vh;
+            animation: navSlideIn $transition-time;
+
+            .hamburger {
+                span:nth-child(1) {
+                    transform: rotate(45deg) translate(0, 12px);
+                }
+
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translate(0, -12px);
+                }
+            }
+
+            li:not(:first-child) {
+                display: block;
+                font-size: larger;
+                padding-bottom: 20px;
+                animation: colorFadeIn $transition-time;
+            }
+        }
+
+        &.contracted {
+            animation: navSlideOut $transition-time;
+
+            li:not(:first-child) {
+                animation: colorFadeOut $transition-time;
+            }
+        }
+    }
+}
