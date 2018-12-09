@@ -61,11 +61,20 @@ body {
   padding: 50px 75px;
   overflow-y: auto;
   height: auto; }
+  .container::-webkit-scrollbar {
+    width: 10px; }
+  .container::-webkit-scrollbar-track {
+    background-color: #d1d1d1;
+    border-radius: 5px; }
+  .container::-webkit-scrollbar-thumb {
+    background-color: #b7b7b7;
+    border-radius: 5px; }
   .container p:first-child {
     margin-top: 0; }
 
 @media (max-width: 650px) {
-  html, body {
+  html,
+  body {
     height: auto; }
   .container {
     padding: 20px 0;
