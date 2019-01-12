@@ -242,7 +242,8 @@ h2 {
 @media (max-width: 576px) {
   .index.container {
     display: block;
-    overflow: auto; }
+    overflow: auto;
+    height: auto; }
   .index img {
     width: 100%;
     height: auto; }
