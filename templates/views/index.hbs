@@ -1,5 +1,35 @@
 {{>navbar }}
 
+{{!-- <div class="index container">
+    <div class="cell active">
+        <img src="./media/lady-liberty-still-1.jpg" />
+    </div>
+    <div class="cell">
+        <img src="./media/lady-liberty-cast-and-crew.jpg" />
+    </div>
+    <div class="cell">
+        <img src="./media/rehearsal-1.jpg" />
+    </div>
+    <div class="cell">
+        <img src="./media/lady-liberty-kerri.jpg" />
+    </div>
+</div> --}}
+
 <div class="index container">
-    {{!-- <img src="./media/kerri_quinn.jpg" /> --}}
+    <img class="active splash-img" src="./media/lady-liberty-still-1.jpg" />
+    <img class="splash-img" src="./media/lady-liberty-cast-and-crew.jpg" />
+    <img class="splash-img" src="./media/rehearsal-1.jpg" />
+    <img class="splash-img" src="./media/lady-liberty-kerri.jpg" />
 </div>
+
+
+<script>
+    document.addEventListener("click", function (el) {
+        console.log(el.target);
+        const targetClasses = el.target.classList;
+        if (targetClasses.contains("splash-img") && !targetClasses.contains("active")) {
+            document.querySelector(".splash-img.active").classList.remove("active");
+            el.target.classList.add('active');
+        }
+    })
+</script>
