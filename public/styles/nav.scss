@@ -35,9 +35,12 @@
     .links {
         li:first-child {
             font-size: xx-large;
-            margin-bottom: 30px;
             text-transform: uppercase;
             color: $color-default-accent-1;
+        }
+
+        li:nth-child(2) {
+            margin-top:30px;
         }
 
         li:not(:first-child) {
@@ -55,11 +58,12 @@
     }
 
     @media (max-width: $screen-md) {
-        position: absolute;
+        position: fixed;
+        background-color:inherit;
         top: 0;
         left: 0;
         width: 100%;
-        padding-top: 10px;
+        padding: 10px 0;
         color: $color-default-accent-1;
 
 

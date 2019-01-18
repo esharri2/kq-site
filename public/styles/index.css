@@ -124,9 +124,10 @@ h2 {
       transition: inherit; }
   .navbar .links li:first-child {
     font-size: xx-large;
-    margin-bottom: 30px;
     text-transform: uppercase;
     color: #e07a5f; }
+  .navbar .links li:nth-child(2) {
+    margin-top: 30px; }
   .navbar .links li:not(:first-child) {
     margin-bottom: 10px; }
     .navbar .links li:not(:first-child) a:hover,
@@ -136,11 +137,12 @@ h2 {
       color: #e07a5f; }
   @media (max-width: 992px) {
     .navbar {
-      position: absolute;
+      position: fixed;
+      background-color: inherit;
       top: 0;
       left: 0;
       width: 100%;
-      padding-top: 10px;
+      padding: 10px 0;
       color: #e07a5f; }
       .navbar li:first-child {
         line-height: 30px; }
@@ -219,7 +221,7 @@ h2 {
 .index.container {
   display: grid;
   grid-template-rows: 4fr 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2px;
   height: 80vh;
   overflow: hidden;
@@ -230,12 +232,12 @@ h2 {
   height: 100%;
   align-self: start;
   object-fit: cover;
-  cursor: pointer;
   transition: opacity 0.2s; }
   .index img:not(.active):hover {
-    opacity: .8; }
+    opacity: .8;
+    cursor: pointer; }
   .index img.active {
-    grid-column: 1/4;
+    grid-column: 1/5;
     grid-row-start: 1;
     align-self: start; }
 
