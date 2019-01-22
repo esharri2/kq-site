@@ -16,6 +16,6 @@ exports = module.exports = function(app) {
   app.get("/bio", routes.views.bio);
   app.get("/workshops", routes.views.workshops);
   app.get("/projects", routes.views.projects);
-  app.get("/writing", routes.views.writing);
+  // app.get("/writing", routes.views.writing);
   app.get("/contact", routes.views.contact);
 };

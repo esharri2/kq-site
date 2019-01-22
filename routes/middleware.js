@@ -3,7 +3,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Kerri Quinn', key: 'index', href: '/' },
 		{ label: 'Bio', key: 'bio', href: '/bio' },
 		{ label: 'Projects', key: 'projects', href: '/projects' },
-		{ label: 'Writing', key: 'writing', href: '/writing' },
+		// { label: 'Writing', key: 'writing', href: '/writing' },
 		{ label: 'Workshops', key: 'workshops', href: '/workshops' },
 		{ label: 'Contact', key: 'contact', href: '/contact' }
 	];

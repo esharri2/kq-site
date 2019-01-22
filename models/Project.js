@@ -15,7 +15,7 @@ Project.add({
     },
     type: {
         type: Types.Select,
-        options: 'short film, feature film, play, other',
+        options: 'short film, feature film, play, episodic, web series, other',
         default: 'other',
         index: true,
         initial: true
