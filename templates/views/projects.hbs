@@ -2,16 +2,14 @@
 
 <div class="projects container">
     {{#each projects}}
+    <h1 class="cat">{{@key}}</h1>
+    {{#each this~}}
     <div class="project">
-
-        <h1 class="project-title">{{title}}</h1>
-   
-        <div class="subtitle">
-            <span class="type">{{type}}</span>
-            {{#if formattedDate}}
+        <h2 class="project-title">{{title}}</h2>
+        <div class="subtitle">{{#if formattedDate~}}
             <span class="release">{{formattedDate}}</span>
-            {{/if}}
-            {{#if url}}<a class="link" href={{url}}>Website</a>{{/if}}
+            {{/if~}}
+            {{#if url~}}<a class="link" href={{url}}>Website</a>{{/if~}}
         </div>
         {{#if image.secure_url}}
         <img src="{{image.secure_url}}" />
@@ -21,6 +19,26 @@
             {{{description}}}
         </div>
         {{/if}}
+
     </div>
+    {{/each~}}
     {{/each}}
+
+
+
+
+
+
+
 </div>
+
+{{!--
+<script>
+    var allParas = document.getElementsByTagName('div');
+    //filter by class name if desired...
+    for (var i = 0; i < allParas.length; i++) {
+        if (allParas[i].getElementsByTagName('*').length == 0) {
+            allParas[i].style.display = 'none';
+        }
+    }
+</script> --}}
