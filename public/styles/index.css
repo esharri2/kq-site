@@ -196,9 +196,13 @@ h2 {
   flex-wrap: wrap;
   margin-bottom: 15px; }
   .projects .subtitle:not(:empty) *:not(:last-child)::after,
+<<<<<<< HEAD
   .projects .subtitle:not(:empty) .slash::after,
   .writings .subtitle:not(:empty) *:not(:last-child)::after,
   .writings .subtitle:not(:empty) .slash::after {
+=======
+  .writings .subtitle:not(:empty) *:not(:last-child)::after {
+>>>>>>> 391f2574f5b08082c1b1e94bea5c664f97deeee6
     content: "/";
     color: #e07a5f;
     display: inline-block;
