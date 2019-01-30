@@ -15,11 +15,7 @@ Project.add({
   },
   type: {
     type: Types.Select,
-<<<<<<< HEAD
     options: "short film, feature film, play, episodic, web series, other",
-=======
-    options: "films, plays, episodic, web series, other",
->>>>>>> 391f2574f5b08082c1b1e94bea5c664f97deeee6
     index: true,
     initial: true
   },
@@ -37,13 +33,10 @@ Project.add({
   releaseDate: {
     type: Types.Date,
     default: Date.now
-<<<<<<< HEAD
   },
   released: {
     type: Types.Boolean,
     deafault: false
-=======
->>>>>>> 391f2574f5b08082c1b1e94bea5c664f97deeee6
   }
 });
 
