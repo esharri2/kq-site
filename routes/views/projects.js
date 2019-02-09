@@ -25,18 +25,37 @@ module.exports = function(req, res) {
 
       let sortedData = data.sort((a, b) => {
         if (moment(a.releaseDate) > moment(b.releaseDate)) {
-          console.log("gt!");
           return -1;
         }
         if (a.releaseDate < b.releaseDate) {
-          console.log("lt!");
           return 1;
         }
-        console.log("eq!");
         return 0;
       });
 
+      let unproduced = {
+        films: [],
+        plays: [],
+        episodic: [],
+        webseries: []
+      };
+
+      sortedData.forEach(item => {
+        if (!item.released) {
+          if (item.type === "short film" || item.type === "feature film") {
+            unproduced.films.push(item);
+          } else if (item.type === "play") {
+            unproduced.plays.push(item);
+          } else if (item.type === "episodic") {
+            unproduced.episodic.push(item);
+          } else if (item.type === "web series") {
+            unproduced.webseries.push(item);
+          }
+        }
+      });
+
       locals.projects = sortedData;
+      locals.unproduced = unproduced;
       next(err);
     });
   });

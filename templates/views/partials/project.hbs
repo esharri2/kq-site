@@ -1,0 +1,18 @@
+<div class="project">
+    <h2 class="project-title">{{title}}</h2>
+    <div class="subtitle">
+        <span class="type">{{type}}</span>
+        {{#if formattedDate}}
+        <span class="release">{{formattedDate}}</span>
+        {{/if}}
+        {{#if url}}<a class="link" href={{url}}>Website</a>{{/if}}
+    </div>
+    {{#if image.secure_url}}
+    <img src="{{image.secure_url}}" />
+    {{/if}}
+    {{#if description}}
+    <div class="description">
+        {{{description}}}
+    </div>
+    {{/if}}
+</div>

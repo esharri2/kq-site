@@ -1,11 +1,22 @@
+$project-page-margin: 15px;
+
 .projects,
 .writings {
-  $project-page-margin: 15px;
-
   .cat {
     font-size: 1.5em;
     text-transform: uppercase;
     border-bottom: 1px solid $color-orange;
+  }
+
+  h2:not(.project-title) {
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    margin-top: calc(#{$project-page-margin} * 2);
+    // margin: calc(#{$project-page-margin} * 2) auto 0 auto;
+    // border-bottom: 1px solid $color-orange;
+    // width: auto;
+    // display: inline-block;
   }
 
   .project-title {
@@ -68,5 +79,17 @@
     height: 100%;
     padding: 0 10px;
     font-weight: lighter;
+  }
+}
+
+.project.unproduced {
+  // padding-left: 10px;
+  .project-title {
+    font-size: 1em;
+    margin-bottom: $project-page-margin/ 2;
+  }
+
+  .description {
+    margin-bottom: 0;
   }
 }
