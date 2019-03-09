@@ -279,7 +279,9 @@ h2 {
   align-self: start;
   object-fit: cover;
   transition: opacity 0.2s;
-  animation: fadeIn 1s ease-in; }
+  animation: fadeIn 2s ease-in;
+  background-color: #e07a5f;
+  display: block; }
   .index img:not(.active):hover {
     opacity: 0.8;
     cursor: pointer; }

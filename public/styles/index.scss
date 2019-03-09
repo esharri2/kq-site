@@ -23,7 +23,9 @@
     align-self: start;
     object-fit: cover;
     transition: opacity $transition-fast;
-    animation: fadeIn $transition-slow ease-in;
+    animation: fadeIn 2s ease-in;
+    background-color: $color-orange;
+    display: block;
 
     &:not(.active):hover {
       opacity: 0.8;
