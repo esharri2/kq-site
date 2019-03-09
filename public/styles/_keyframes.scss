@@ -1,41 +1,51 @@
 @keyframes navSlideIn {
-    0% {
-        height: 0;
-    }
+  0% {
+    height: 0;
+  }
 
-    100% {
-        height: 100vh;
-        background: $color-gray;
-    }
+  100% {
+    height: 100vh;
+    background: $color-gray;
+  }
 }
 
 @keyframes navSlideOut {
-    0% {
-        height: 100vh;
-        background: $color-gray
-    }
+  0% {
+    height: 100vh;
+    background: $color-gray;
+  }
 
-    100% {
-        height: 0;
-    }
+  100% {
+    height: 0;
+  }
 }
 
 @keyframes colorFadeOut {
-    0% {
-        color: inherit;
-    }
+  0% {
+    color: inherit;
+  }
 
-    100% {
-        color: transparent;
-    }
+  100% {
+    color: transparent;
+  }
 }
 
 @keyframes colorFadeIn {
-    0% {
-        color: transparent;
-    }
+  0% {
+    color: transparent;
+  }
 
-    100% {
-        color: inherit;
-    }
+  100% {
+    color: inherit;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
