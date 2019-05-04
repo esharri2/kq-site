@@ -12,6 +12,7 @@ module.exports = function(req, res) {
   view.on("init", function(next) {
     var q = Project.model.find();
     q.exec(function(err, results) {
+      results = results || [];
       let data = results.map(result => {
         const newObject = { ...result._doc };
         if (result.releaseDate) {

@@ -113,7 +113,8 @@ h2 {
 .navbar {
   width: 150px;
   display: flex;
-  color: #313d5a; }
+  color: #313d5a;
+  z-index: 2; }
   .navbar .hamburger {
     width: 25px;
     margin: 5px 20px 0 20px;

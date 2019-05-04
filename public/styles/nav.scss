@@ -1,119 +1,118 @@
 .navbar {
-    $transition-time: .5s;
-    width: $width-nav;
-    display: flex;
-    color: $color-default-text;
+  $transition-time: 0.5s;
+  width: $width-nav;
+  display: flex;
+  color: $color-default-text;
+  z-index: 2;
+
+  .hamburger {
+    width: 25px;
+    margin: 5px 20px 0 20px;
+    display: none;
+    height: 25px;
+    cursor: pointer;
+    transition: all $transition-time;
+
+    span {
+      display: block;
+      height: 3px;
+      margin-bottom: 5px;
+      width: 100%;
+      background: $color-default-accent-1;
+      pointer-events: none;
+      transition: inherit;
+    }
+  }
+
+  ul,
+  li {
+    @extend %reset-list;
+  }
+
+  a {
+    @extend %reset-link;
+  }
+
+  .links {
+    li:first-child {
+      font-size: xx-large;
+      text-transform: uppercase;
+      color: $color-default-accent-1;
+    }
+
+    li:nth-child(2) {
+      margin-top: 30px;
+    }
+
+    li:not(:first-child) {
+      margin-bottom: 10px;
+
+      a:hover,
+      a:focus {
+        font-weight: 700;
+      }
+
+      a.active {
+        color: $color-orange;
+      }
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    position: fixed;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    color: $color-default-accent-1;
+
+    li:first-child {
+      line-height: 30px;
+    }
 
     .hamburger {
-        width: 25px;
-        margin: 5px 20px 0 20px;
-        display: none;
-        height: 25px;
-        cursor: pointer;
-        transition: all $transition-time;
-
-        span {
-            display: block;
-            height: 3px;
-            margin-bottom: 5px;
-            width: 100%;
-            background: $color-default-accent-1;
-            pointer-events: none;
-            transition: inherit;
-        }
+      display: block;
     }
 
-    ul,
-    li {
-        @extend %reset-list;
+    li:not(:first-child) {
+      display: none;
+      width: 0;
     }
 
-    a {
-        @extend %reset-link;
+    &.expanded {
+      background: $color-gray;
+      height: 100vh;
+      animation: navSlideIn $transition-time;
+
+      .hamburger {
+        span:nth-child(1) {
+          transform: rotate(45deg) translate(0, 12px);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-45deg) translate(0, -12px);
+        }
+      }
+
+      li:not(:first-child) {
+        display: block;
+        font-size: larger;
+        padding-bottom: 20px;
+        animation: colorFadeIn $transition-time;
+      }
     }
 
-    .links {
-        li:first-child {
-            font-size: xx-large;
-            text-transform: uppercase;
-            color: $color-default-accent-1;
-        }
+    &.contracted {
+      animation: navSlideOut $transition-time;
 
-        li:nth-child(2) {
-            margin-top:30px;
-        }
-
-        li:not(:first-child) {
-            margin-bottom: 10px;
-
-            a:hover,
-            a:focus {
-                font-weight: 700;
-            }
-
-            a.active {
-                color:$color-orange;
-            }
-        }
+      li:not(:first-child) {
+        animation: colorFadeOut $transition-time;
+      }
     }
-
-    @media (max-width: $screen-md) {
-        position: fixed;
-        background-color:inherit;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        color: $color-default-accent-1;
-
-
-        li:first-child {
-            line-height: 30px;
-        }
-
-        .hamburger {
-            display: block;
-        }
-
-        // li:first-child {}
-        li:not(:first-child) {
-            display: none;
-            width: 0;
-        }
-
-        &.expanded {
-            background: $color-gray;
-            height: 100vh;
-            animation: navSlideIn $transition-time;
-
-            .hamburger {
-                span:nth-child(1) {
-                    transform: rotate(45deg) translate(0, 12px);
-                }
-
-                span:nth-child(2) {
-                    opacity: 0;
-                }
-
-                span:nth-child(3) {
-                    transform: rotate(-45deg) translate(0, -12px);
-                }
-            }
-
-            li:not(:first-child) {
-                display: block;
-                font-size: larger;
-                padding-bottom: 20px;
-                animation: colorFadeIn $transition-time;
-            }
-        }
-
-        &.contracted {
-            animation: navSlideOut $transition-time;
-
-            li:not(:first-child) {
-                animation: colorFadeOut $transition-time;
-            }
-        }
-    }
+  }
 }
