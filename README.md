@@ -1,3 +1,0 @@
-# Lady Liberty
-
-WIP
