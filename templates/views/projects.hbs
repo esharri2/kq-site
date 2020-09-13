@@ -9,6 +9,10 @@
     {{/ifeq}}
     {{/each}}
     <h1 class="cat">Scripts<span class="slash"></span>Screenplays</h1>
+    <h2>Episodic</h2>
+    {{#each unproduced.episodic}}
+    {{>unproducedproject this}}
+    {{/each}}
     <h2>Plays</h2>
     {{#each unproduced.plays}}
     {{>unproducedproject this}}
@@ -17,14 +21,7 @@
     {{#each unproduced.films}}
     {{>unproducedproject this}}
     {{/each}}
-    <h2>Episodic</h2>
-    {{#each unproduced.episodic}}
-    {{>unproducedproject this}}
-    {{/each}}
-    <h2>Web series</h2>
-    {{#each unproduced.webseries}}
-    {{>unproducedproject this}}
-    {{/each}}
+  
 
 
     {{#each projects}}
