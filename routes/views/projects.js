@@ -2,18 +2,18 @@ var keystone = require("keystone");
 var moment = require("moment");
 var async = require("async");
 
-module.exports = function(req, res) {
+module.exports = function (req, res) {
   var view = new keystone.View(req, res);
   var locals = res.locals;
   locals.section = "projects";
 
   var Project = keystone.list("Project");
 
-  view.on("init", function(next) {
+  view.on("init", function (next) {
     var q = Project.model.find();
-    q.exec(function(err, results) {
+    q.exec(function (err, results) {
       results = results || [];
-      let data = results.map(result => {
+      let data = results.map((result) => {
         const newObject = { ...result._doc };
         if (result.releaseDate) {
           const formattedDate = moment(result.releaseDate).format("MMMM YYYY");
@@ -38,10 +38,10 @@ module.exports = function(req, res) {
         films: [],
         plays: [],
         episodic: [],
-        webseries: []
+        webseries: [],
       };
 
-      sortedData.forEach(item => {
+      sortedData.forEach((item) => {
         if (!item.released) {
           if (item.type === "short film" || item.type === "feature film") {
             unproduced.films.push(item);
@@ -52,6 +52,12 @@ module.exports = function(req, res) {
           } else if (item.type === "web series") {
             unproduced.webseries.push(item);
           }
+        }
+
+        if (
+          item.title.toLowerCase() === "SUPER SAM’S GARAGE BAND".toLowerCase()
+        ) {
+          item.isAnimation = true;
         }
       });
 

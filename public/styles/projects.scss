@@ -86,9 +86,14 @@ $project-page-margin: 15px;
   // padding-left: 10px;
   margin-top: 2rem;
 
-  .project-title {
+  .project-title,
+  .project-medium {
     // font-size: 1em;
     margin-bottom: $project-page-margin/ 2;
+  }
+
+  .project-medium {
+    margin-top: 0;
   }
 
   .description {

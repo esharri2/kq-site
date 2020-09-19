@@ -246,8 +246,12 @@ h2 {
 
 .project.unproduced {
   margin-top: 2rem; }
-  .project.unproduced .project-title {
+  .project.unproduced .project-title,
+  .project.unproduced .project-medium {
     margin-bottom: 7.5px; }
+  .project.unproduced .project-medium {
+    margin-top: 0;
+    text-transform: uppercase; }
   .project.unproduced .description {
     margin-bottom: 0; }
 
